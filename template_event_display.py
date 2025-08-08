@@ -128,14 +128,10 @@ def generate_event_display(event):
         <p style="margin: 0;"><strong>What's Provided:</strong> All tools and equipment will be provided unless otherwise noted.</p>
     </div>
     
-    <!-- Registration Form Anchor -->
-    <div id="registration-form" style="margin-top: 40px; padding: 30px; background-color: white; border: 2px solid #005987; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,89,135,0.1);">
-        <h3 style="margin: 0 0 20px 0; color: #005987; font-size: 1.5rem; font-weight: 600;">Ready to Register?</h3>
-        <p style="margin: 0 0 20px 0; font-size: 1.1rem; color: #333;">Registration form will appear here when integrated with CiviCRM.</p>
-        <p style="margin: 0; font-size: 0.9rem; color: #666;">This section will be replaced with your actual CiviCRM registration form.</p>
-    </div>
     
-    </div> <!-- End Main Container -->
+    <!-- Registration Form Anchor -->
+    <div id="registration-form">
+    </div>
     
 </body>
 </html>"""
