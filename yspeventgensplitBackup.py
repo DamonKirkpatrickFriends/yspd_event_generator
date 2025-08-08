@@ -4,13 +4,15 @@ import io
 import zipfile
 from datetime import datetime
 
-# Import template functions from separate files
-from template_confirmation import generate_registration_confirmation
-from template_14_day import generate_14_day_template
-from template_3_day import generate_3_day_template
-from template_day_before import generate_day_before_template
-from template_event_display import generate_event_display
-from utils import safe_get
+# Import template functions from separate file
+from templates import (
+    generate_event_display,
+    generate_registration_confirmation,
+    generate_14_day_template,
+    generate_3_day_template,
+    generate_day_before_template,
+    safe_get
+)
 
 # Page config
 st.set_page_config(
@@ -558,7 +560,7 @@ elif page == "4. Generate Templates":
             # Show first few as preview with better error handling
             st.subheader("Preview Generated Templates")
             
-            preview_count = len(generated_files)
+            preview_count = min(3, len(generated_files))
             for i in range(preview_count):
                 filename, content = generated_files[i]
                 with st.expander(f"Preview: {filename}"):
