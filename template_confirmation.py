@@ -73,39 +73,12 @@ def generate_registration_confirmation(event):
                                 Thank you for registering!
                             </h2>
                             <p style="margin: 0; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #333;">
-                                You're all set for <strong>{park_name} - Your State Parks Day</strong>! We're excited to have you join volunteers across all 63 Georgia State Parks and Historic Sites for this statewide day of service.
+                                You're all set for <strong>{park_name} - Your State Parks Day</strong>! We're excited to have you join us for this statewide day of service.
                             </p>
                         </td>
                     </tr>
                 </table>
                 
-                <!-- Event Details - Highlight Box Style -->
-                <table style="width: 100%; border-collapse: collapse; margin-bottom: 25px;">
-                    <tr>
-                        <td style="padding: 25px; background-color: #f8f9fa; border-left: 5px solid #005987; border-radius: 12px;">
-                            <h3 style="margin: 0 0 15px 0; font-family: Arial, sans-serif; font-size: 18px; font-weight: 600; color: #005987;">
-                                Your Event Details:
-                            </h3>
-                            <table style="width: 100%; border-collapse: collapse;">
-                                <tr>
-                                    <td style="padding: 8px 0; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333;">
-                                        <strong>Project:</strong> {project_description}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 8px 0; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333;">
-                                        <strong>Date & Time:</strong> {{event.start_date}} - {{event.end_date}}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 8px 0; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333;">
-                                        <strong>Specific Meeting Location:</strong> {meeting_location}
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
                 
                 <!-- Logo -->
                 <table style="width: 100%; border-collapse: collapse; margin-bottom: 25px;">
@@ -168,6 +141,72 @@ def generate_registration_confirmation(event):
                         </td>
                     </tr>
                 </table>
+                
+                <!-- Important Safety and Legal Information - Card Style -->
+                <table style="width: 100%; border-collapse: collapse; margin-bottom: 25px;">
+                    <tr>
+                        <td style="padding: 25px; background-color: white; border: 2px solid #005987; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,89,135,0.1);">
+                            <h3 style="margin: 0 0 15px 0; font-family: Arial, sans-serif; font-size: 20px; font-weight: 600; color: #005987; border-bottom: 2px solid #005987; padding-bottom: 8px;">
+                                Important Information
+                            </h3>
+                            
+                            <p style="margin: 0 0 10px 0; font-family: Arial, sans-serif; font-size: 16px; font-weight: 600; color: #005987;">
+                                Your Safety Matters:
+                            </p>
+                            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                                <tr>
+                                    <td style="padding: 4px 0; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333;">
+                                        • Volunteer activities involve some natural risks (outdoor work, equipment use, etc.)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px 0; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333;">
+                                        • You're responsible for following safety guidelines and using equipment properly
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px 0; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333;">
+                                        • Friends of Georgia State Parks provides guidance but cannot guarantee against all risks
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <p style="margin: 20px 0 10px 0; font-family: Arial, sans-serif; font-size: 16px; font-weight: 600; color: #005987;">
+                                Photo Permission:
+                            </p>
+                            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                                <tr>
+                                    <td style="padding: 4px 0; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333;">
+                                        • We may take photos/videos during volunteer activities
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px 0; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333;">
+                                        • These help us share the great work volunteers do and apply for grants
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px 0; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333;">
+                                        • Your participation gives us permission to use these images
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <p style="margin: 20px 0 10px 0; font-family: Arial, sans-serif; font-size: 16px; font-weight: 600; color: #005987;">
+                                The Legal Stuff:
+                            </p>
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr>
+                                    <td style="padding: 4px 0; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333;">
+                                        • As a volunteer, you're not an employee and aren't covered by workers' compensation
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px 0; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333;">
+                                        • You agree not to hold us liable for injuries that might occur
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                 </table>

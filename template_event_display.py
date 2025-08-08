@@ -61,8 +61,8 @@ def generate_event_display(event):
     
     # Combine all sections under "What to Expect"
     need_to_know_combined = f'''
-    <div class="info-section">
-        <div class="section-header">What to Expect</div>
+    <div style="background-color: white; padding: 25px; border: 2px solid #005987; margin: 20px 0; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,89,135,0.1);">
+        <div style="color: #005987; font-size: 1.25rem; font-weight: 600; margin-bottom: 15px; border-bottom: 2px solid #005987; padding-bottom: 8px;">What to Expect</div>
         {''.join(need_to_know_sections)}
     </div>''' if need_to_know_sections else ''
     
@@ -72,70 +72,43 @@ def generate_event_display(event):
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your State Parks Day 2025 - {park_name}</title>
-    <style>
-        body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; }}
-        .header {{ background: linear-gradient(135deg, #005987 0%, #007bb8 100%); color: white; padding: 30px; text-align: center; border-radius: 12px; margin-bottom: 30px; }}
-        .header h1 {{ margin: 0 0 10px 0; font-size: 2rem; font-weight: 600; line-height: 1.2; }}
-        .header h2 {{ margin: 0 0 15px 0; font-size: 1.5rem; font-weight: 500; }}
-        .header p {{ font-size: 1.1rem; margin: 0; opacity: 0.95; }}
-        
-        .event-details {{ background-color: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #005987; }}
-        .event-details h3 {{ color: #005987; margin-top: 0; font-size: 1.3rem; font-weight: 600; }}
-        
-        .info-section {{ background-color: white; padding: 25px; border: 2px solid #005987; margin: 20px 0; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,89,135,0.1); }}
-        .section-header {{ color: #005987; font-size: 1.25rem; font-weight: 600; margin-bottom: 15px; border-bottom: 2px solid #005987; padding-bottom: 8px; }}
-        
-        .register-button {{ background: linear-gradient(135deg, #005987 0%, #007bb8 100%); color: white; padding: 15px 30px; font-size: 1.1rem; font-weight: 600; text-decoration: none; border-radius: 8px; display: inline-block; margin: 20px 0; transition: all 0.3s ease; }}
-        .register-button:hover {{ background: linear-gradient(135deg, #004470 0%, #006ba1 100%); transform: translateY(-1px); }}
-        
-        .two-column {{ display: flex; gap: 30px; margin: 20px 0; }}
-        .column {{ flex: 1; }}
-        
-        .contact-box {{ background: linear-gradient(135deg, #005987 0%, #007bb8 100%); color: white; padding: 25px; margin-top: 20px; border-radius: 12px; text-align: center; }}
-        .contact-box h3 {{ margin-top: 0; font-size: 1.3rem; font-weight: 600; }}
-        .contact-box a {{ color: #d4af37; text-decoration: none; font-weight: 600; }}
-        .contact-box a:hover {{ text-decoration: underline; }}
-        
-        ul {{ margin: 10px 0; padding-left: 20px; }}
-        li {{ margin-bottom: 8px; font-size: 14px; line-height: 1.6; }}
-        
-        @media (max-width: 768px) {{ 
-            .two-column {{ flex-direction: column; gap: 15px; }}
-            body {{ padding: 10px; }}
-            .header {{ padding: 20px; }}
-            .header h1 {{ font-size: 1.5rem; }}
-            .header h2 {{ font-size: 1.2rem; }}
-        }}
-    </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Your State Parks Day 2025</h1>
-        <h2>{park_name}</h2>
-        <p>Join us for a day of conservation and community service!</p>
-    </div>
     
-    <div class="event-details">
-        <h3>Event Details</h3>
-        <div class="two-column">
-            <div class="column">
-                <p><strong style="color: #005987;">📅 Date:</strong> {event_date}</p>
-                <p><strong style="color: #005987;">🕘 Time:</strong> {meeting_time} - {end_time}</p>
-                <p><strong style="color: #005987;">📍 Specific Meeting Location:</strong> {meeting_location}</p>
+    <!-- Main Container -->
+    <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f8f9fa;">
+    
+        <!-- Header -->
+        <div style="background: linear-gradient(135deg, #005987 0%, #007bb8 100%); color: white; padding: 30px; text-align: center; border-radius: 12px; margin-bottom: 30px;">
+            <h1 style="margin: 0 0 10px 0; font-size: 2rem; font-weight: 600; line-height: 1.2;">Your State Parks Day 2025</h1>
+            <h2 style="margin: 0 0 15px 0; font-size: 1.5rem; font-weight: 500;">{park_name}</h2>
+            <p style="font-size: 1.1rem; margin: 0; opacity: 0.95;">Join us for a day of service and stewardship!</p>
+        </div>
+    
+    <!-- Event Details -->
+    <div style="background-color: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #005987;">
+        <h3 style="color: #005987; margin-top: 0; font-size: 1.3rem; font-weight: 600;">Event Details</h3>
+        <div style="display: flex; gap: 30px; margin: 20px 0; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 250px;">
+                <p style="margin: 0 0 8px 0;"><strong style="color: #005987;">📅 Date:</strong> {event_date}</p>
+                <p style="margin: 0 0 8px 0;"><strong style="color: #005987;">🕘 Time:</strong> {meeting_time} - {end_time}</p>
+                <p style="margin: 0;"><strong style="color: #005987;">📍 Specific Meeting Location:</strong> {meeting_location}</p>
             </div>
-            <div class="column">
-                <p><strong style="color: #005987;">🎯 Project:</strong></p>
-                <p>{project_description}</p>
+            <div style="flex: 1; min-width: 250px;">
+                <p style="margin: 0 0 8px 0;"><strong style="color: #005987;">🎯 Project:</strong></p>
+                <p style="margin: 0;">{project_description}</p>
             </div>
         </div>
     </div>
     
+    <!-- Register Button -->
     <div style="text-align: center;">
-        <a href="#registration-form" class="register-button">REGISTER BELOW</a>
+        <a href="#registration-form" style="background: linear-gradient(135deg, #005987 0%, #007bb8 100%); color: white; padding: 15px 30px; font-size: 1.1rem; font-weight: 600; text-decoration: none; border-radius: 8px; display: inline-block; margin: 20px 0; transition: all 0.3s ease;">REGISTER BELOW</a>
     </div>
     
-    <div class="info-section">
-        <div class="section-header">About Your State Parks Day</div>
+    <!-- About Your State Parks Day -->
+    <div style="background-color: white; padding: 25px; border: 2px solid #005987; margin: 20px 0; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,89,135,0.1);">
+        <div style="color: #005987; font-size: 1.25rem; font-weight: 600; margin-bottom: 15px; border-bottom: 2px solid #005987; padding-bottom: 8px;">About Your State Parks Day</div>
         
         <img alt="Your State Parks Day Logo" src="https://friendsofgastateparks.org/sites/default/files/styles/large/public/2025-06/YSPD-LOGO---Original.png" style="float:right;max-width:150px;height:auto;margin:0 0 15px 20px;" />
         
@@ -146,21 +119,19 @@ def generate_event_display(event):
     
     {need_to_know_combined}
     
-    <div class="info-section">
-        <div class="section-header">Important Information</div>
+    <!-- Important Information -->
+    <div style="background-color: white; padding: 25px; border: 2px solid #005987; margin: 20px 0; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,89,135,0.1);">
+        <div style="color: #005987; font-size: 1.25rem; font-weight: 600; margin-bottom: 15px; border-bottom: 2px solid #005987; padding-bottom: 8px;">Important Information</div>
         
-        <p><strong>Weather Policy:</strong> This is an outdoor event. Inclement weather may force cancellation. Check with the park if you have questions on the day of the event.</p>
+        <p style="margin: 0 0 15px 0;"><strong>Weather Policy:</strong> This is an outdoor event. Inclement weather may force cancellation. Check with the park if you have questions on the day of the event.</p>
         
-        <p><strong>What's Provided:</strong> All tools and equipment will be provided unless otherwise noted.</p>
+        <p style="margin: 0;"><strong>What's Provided:</strong> All tools and equipment will be provided unless otherwise noted.</p>
     </div>
     
-    <div class="contact-box">
-        <h3>Questions? Contact Friends of Georgia State Parks</h3>
-        <p><strong>📞 Phone:</strong> (770) 383-8900<br>
-        📧 <strong>Email:</strong> info@friendsofgastateparks.org<br>
-        💬 <strong>Live Chat:</strong> <a href="https://direct.lc.chat/10608367/" target="_blank">Click here to chat with us</a><br>
-        🌐 <strong>More Info:</strong> <a href="https://friendsofgastateparks.org/yspd2025" target="_blank">friendsofgastateparks.org/yspd2025</a></p>
-    </div>
+    <!-- Registration Form Anchor -->
+    <div id="registration-form" </div>
+    
+    </div> <!-- End Main Container -->
     
 </body>
 </html>"""
